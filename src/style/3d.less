@@ -1,0 +1,163 @@
+@import "base/index.less";
+canvas {
+    background-repeat: no-repeat;
+    background-size  : 100%;
+}
+
+.camera {
+    perspective       : 2400px;
+    perspective-origin: 50% 50%;
+    transform-style   : preserve-3d;
+    font-size         : 12px;
+    color             : #f9fde6;
+}
+
+div[type='space'] {
+    width           : 650px;
+    height          : 650px;
+    position        : relative;
+    transform-origin: 50% 50%;
+    transform-style : preserve-3d;
+    // transform       : translateZ(325px) rotateX(12.6deg) rotateY(-30.1deg);
+}
+
+@stoneWidth : 13px;
+@stoneHeight: 13px;
+@center     : 13px/2;
+
+div[type*='axis'] {
+    left          : 50%;
+    top           : 50%;
+    height        : 2px;
+    width         : 400px;
+    position      : absolute;
+    pointer-events: none;
+
+    &::after,
+    &::before {
+        content         : '';
+        position        : absolute;
+        right           : 0px;
+        height          : 2px;
+        width           : 20px;
+        transform       : rotate(30deg);
+        transform-origin: 100% 0;
+    }
+
+    &::after {
+        transform-origin: 100% 0;
+    }
+
+    &::before {
+        transform-origin: 100% 100%;
+        transform       : rotate(-30deg);
+    }
+}
+
+div[type='axis-x'] {
+    top       : 50%;
+    transform : translate(-50%, -50%);
+    background: red;
+
+    &::after,
+    &::before {
+        background: red;
+    }
+
+}
+
+div[type='axis-y'] {
+    background: #0f0;
+    transform : translate(-50%, -50%) rotateZ(-90deg);
+
+    &::after,
+    &::before {
+        background: #0f0;
+    }
+}
+
+div[type='axis-z'] {
+    background: #00f;
+    transform : translate(-50%, -50%) rotateY(90deg);
+
+    &::after,
+    &::before {
+        background: #00f;
+    }
+}
+
+div[type='stone'] {
+    top             : 0;
+    left            : 0;
+    width           : @stoneWidth;
+    height          : @stoneHeight;
+    position        : absolute;
+    transform-style : preserve-3d;
+    transform-origin: 50% 50%;
+    transition      : all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    pointer-events  : none;
+
+    >i {
+        width           : 100%;
+        height          : 100%;
+        position        : absolute;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        pointer-events  : none;
+        background-color: #152534;
+        border          : 1px solid #0c94e0;
+
+        &:nth-child(1) {
+            transform: translateZ(@center);
+        }
+
+        &:nth-child(2) {
+            transform: rotateX(180deg) translateZ(@center);
+        }
+
+        &:nth-child(3) {
+            transform: rotateX(90deg) translateZ(@center);
+        }
+
+        &:nth-child(4) {
+            transform: rotateX(-90deg) translateZ(@center);
+        }
+
+        &:nth-child(5) {
+            transform: rotateY(90deg) translateZ(@center);
+        }
+
+        &:nth-child(6) {
+            transform: rotateY(-90deg) translateZ(@center);
+        }
+    }
+}
+// .components-avatar {
+//     display       : flex;
+//     align-items   : center;
+//     padding       : 2px 4px;
+//     height        : 24px;
+//     max-width     : 78px;
+//     pointer-events: none;
+//     font-family   : PingFangSC-Regular;
+//     font-size     : 14px;
+//     color         : rgba(0, 0, 0, .87);
+//     cursor        : pointer;
+
+//     >img {
+//         width        : 20px;
+//         height       : 20px;
+//         border-radius: 50%;
+//     }
+
+//     &::after {
+//         content    : attr(data-name);
+//         margin-left: 8px;
+//     }
+
+//     &:hover {
+//         background-color: rgba(0, 0, 0, .06);
+//         border-radius   : 4px;
+//     }
+// }

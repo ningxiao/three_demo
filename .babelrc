@@ -1,0 +1,11 @@
+{
+    "plugins": [
+        [
+            "component",
+            {
+                "libraryName": "@ss/mtd-vue",
+                "styleLibraryName": "theme2"
+            }
+        ]
+    ]
+}

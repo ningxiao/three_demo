@@ -1,0 +1,6 @@
+{
+    "npm-scripts.showStartNotification": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    }
+}

@@ -1,0 +1,80 @@
+@import "base/index.less";
+
+@keyframes letter1 {
+    from {
+        transform: translate(0, -80px);
+    }
+
+    to {
+        transform: translate(0, -800px);
+    }
+}
+
+@keyframes scenes1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scenes2 {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, -800px);
+    }
+}
+
+.starry_sky {
+    width : 100%;
+    height: 100%;
+}
+
+.scenes {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.total {
+    font-size  : 80px;
+    font-family: bold;
+
+    >span {
+        width         : 48px;
+        display       : inline-block;
+        vertical-align: middle;
+        position      : relative;
+        overflow      : hidden;
+        margin        : 0 0;
+        color         : #fff;
+        font-family   : bold;
+        font-size     : 80px;
+        font-weight   : 600;
+        line-height   : 80px;
+        text-transform: uppercase;
+        color         : #eee;
+
+        &::before {
+            content         : "0792036815";
+            position        : absolute;
+            top             : 0;
+            left            : 0;
+            width           : 100%;
+            word-break      : break-all;
+            background-color: #171924;
+            animation       : letter1 .4s ease-out 1.15s forwards;
+        }
+    }
+}
+
+.earth {
+    .inner {}
+}

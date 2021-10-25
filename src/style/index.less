@@ -1,0 +1,75 @@
+@import "base/index.less";
+
+canvas {
+    background-repeat: no-repeat;
+    background-size  : 100%;
+}
+
+#app {
+    width    : 100%;
+    height   : 100%;
+    display  : flex;
+    flex-flow: row wrap;
+}
+
+.camera {
+    perspective       : 1200px;
+    perspective-origin: 50% 50%;
+    transform-style   : preserve-3d;
+}
+
+div[type='space'] {
+    width           : 650px;
+    height          : 650px;
+    position        : relative;
+    transform-origin: 50% 50%;
+    transform-style : preserve-3d;
+}
+
+div[type='stone'] {
+    transform-style : preserve-3d;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    width           : 13px;
+    height          : 13px;
+    transform-origin: 50% 50%;
+    transform       : translate3d(0, 0, 6.5px);
+    transition      : all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    pointer-events  : none;
+
+    >div {
+        content         : 'x';
+        background-color: #152534;
+        border          : 1px solid #0c94e0;
+        position        : absolute;
+        width           : 100%;
+        height          : 100%;
+        font-size       : 12px;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        color           : #f9fde6;
+        pointer-events  : none;
+
+        &:nth-child(1) {
+            transform: translateZ(6.5px);
+        }
+
+        &:nth-child(3) {
+            transform: rotateX(90deg) translateZ(6.5px);
+        }
+
+        &:nth-child(4) {
+            transform: rotateX(-90deg) translateZ(6.5px);
+        }
+
+        &:nth-child(5) {
+            transform: rotateY(90deg) translateZ(6.5px);
+        }
+
+        &:nth-child(6) {
+            transform: rotateY(-90deg) translateZ(6.5px);
+        }
+    }
+}
