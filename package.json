@@ -13,7 +13,6 @@
         "build:module": "asc ./src/assembly/module.ts -t www/wasm/module.optimized.wat -b www/wasm/module.optimized.wasm -d www/wasm/module.optimized.d.ts --runtime stub -O3 --importMemory --sourceMap --measure"
     },
     "dependencies": {
-        "css.gg": "^2.0.0",
         "dat.gui": "^0.7.7",
         "cannon-es": "^0.18.0",
         "simplex-noise": "^3.0.0",
