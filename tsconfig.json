@@ -13,6 +13,7 @@
         "sourceMap": true,
         "baseUrl": "./",
         "types": [
+            "@webgpu/types",
             "webpack-env",
             "jest"
         ],
@@ -38,6 +39,6 @@
     ],
     "exclude": [
         "node_modules",
-        "src/assembly/*.ts"
+        "src/assembly"
     ]
 }

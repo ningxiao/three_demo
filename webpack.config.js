@@ -66,6 +66,15 @@ const config = {
                 ]
             },
             {
+                test: /\.(wgsl)$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'raw-loader',
+                    }
+                ]
+            },
+            {
                 test: /\.css|less$/,
                 use: [
                     {

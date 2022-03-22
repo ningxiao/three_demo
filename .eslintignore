@@ -2,6 +2,7 @@ bin/*
 config/*
 node_modules/*
 src/assembly/*
+service/*
 public/*
 tests/*
 .eslintrc.js

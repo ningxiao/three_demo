@@ -31,6 +31,10 @@ export const menus = [
                 id: '2-1',
                 title: '头像并行',
                 route: 'avatar',
+            }, {
+                id: '2-2',
+                title: '并行缓存',
+                route: 'cacheAsync',
             }
         ]
     }, {
@@ -47,6 +51,11 @@ export const menus = [
                 id: '3-2',
                 title: '飞跃丛林',
                 route: 'jungle',
+            },
+            {
+                id: '3-3',
+                title: '识别手型',
+                route: 'nexus',
             }
         ]
     }, {
@@ -58,6 +67,18 @@ export const menus = [
                 id: '4-1',
                 title: '纹理动效',
                 route: 'effect',
+            },{
+                id: '4-2',
+                title: 'WebGPU入门',
+                route: 'webgpu',
+            },{
+                id:'4-3',
+                title: 'WebGPU排序',
+                route: 'webgpuSort',
+            },{
+                id:'4-4',
+                title: 'WebGPU矩阵',
+                route: 'webgpuMatrix',
             }
         ]
     }
