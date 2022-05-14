@@ -81,5 +81,16 @@ export const menus = [
                 route: 'webgpuMatrix',
             }
         ]
+    }, {
+        id: '5',
+        icon: 'mtdicon mtdicon-laser-pen',
+        title: '神经网络',
+        children: [
+            {
+                id: '5-1',
+                title: '感知器',
+                route: 'sensor',
+            }
+        ]
     }
 ];

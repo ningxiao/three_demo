@@ -1,9 +1,9 @@
 const shader1 = (MAX_THREAD_NUM: number) =>
     `struct structFixedData {
-    data: array<f32, ${MAX_THREAD_NUM}>;
+    data: array<f32, ${MAX_THREAD_NUM}>
 };
 struct ssbo {
-    data: array<f32>;
+    data: array<f32>
 };
 @group(0) @binding(0) var<storage, write> input: ssbo;
 var<workgroup> sharedData: structFixedData;
@@ -46,10 +46,10 @@ fn main(
 }`;
 const shader2 = (MAX_THREAD_NUM: number) =>
     `struct ssbo {
-    data: array<f32>;
+    data: array<f32>
 };
 struct struct_Uniform {
-    data: vec4<u32>;
+    data: vec4<u32>
 };
 @group(0) @binding(0) var<uniform> tonic: struct_Uniform;
 @group(0) @binding(1) var<storage, write> input: ssbo;

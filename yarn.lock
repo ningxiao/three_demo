@@ -11142,11 +11142,6 @@ ts-loader@^9.2.5:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-ts-matrix@^1.1.0:
-  version "1.1.0"
-  resolved "http://r.npm.sankuai.com/ts-matrix/download/ts-matrix-1.1.0.tgz#079ab70f06a4bac14e10e284f470b822012b46f8"
-  integrity sha1-B5q3DwakusFOEOKE9HC4IgErRvg=
-
 ts-node@^10.2.1:
   version "10.4.0"
   resolved "http://r.npm.sankuai.com/ts-node/download/ts-node-10.4.0.tgz#680f88945885f4e6cf450e7f0d6223dd404895f7"

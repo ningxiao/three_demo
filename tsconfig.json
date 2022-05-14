@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES6",
-        "module": "commonjs",
+        "module": "esnext",
         "strict": false,
         "jsx": "preserve",
         "importHelpers": true,
@@ -35,7 +35,7 @@
         "src/**/*.tsx",
         "src/**/*.vue",
         "tests/**/*.ts",
-        "tests/**/*.tsx",
+        "tests/**/*.tsx", "src/worker/my.worker.js",
     ],
     "exclude": [
         "node_modules",

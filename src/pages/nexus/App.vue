@@ -49,7 +49,8 @@ export default class App extends Vue {
         document.body.appendChild(stats.dom);
         const hands = new Hands({
             locateFile: (file) => {
-                return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
+                // console.log(`https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`);
+                return `http://59.110.160.41/pipe/hands/${file}`;
             }
         });
         hands.setOptions({

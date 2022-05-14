@@ -347,3 +347,11 @@ class GameMap {
     }
 }
 new AStar({ X: 0, Y: 0 }, { X: 0, Y: 0 }).loadMap(new GameMap(Maps));
+const worker = new Worker(new URL('../worker/my.worker.js', import.meta.url));
+worker.onmessage = e => console.log(e.data);  // "hello"
+worker.addEventListener('error', ev => {
+    console.log('MAIN: ', 'ERROR', ev);
+    console.log('filename:' + ev.filename + '-message:' + ev.message + '-lineno:' + ev.lineno);
+});
+worker.postMessage('hello');
+console.log(worker);

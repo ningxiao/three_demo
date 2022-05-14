@@ -12,4 +12,5 @@ module.exports = {
     webgpuSort: './src/pages/webgpuSort.ts',
     webgpuMatrix: './src/pages/webgpuMatrix.ts',
     '3dloading': './src/pages/3dloading/main.ts',
+    sensor: './src/pages/neural/sensor.ts',
 };

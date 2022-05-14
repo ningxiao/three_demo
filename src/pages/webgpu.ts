@@ -116,7 +116,7 @@ class App {
      * 可选字段depthStencilAttachment表示附加在当前渲染通道用于储存渲染通道的深度信息和模板信息的附件，因为我们只绘制二维图形，所以不需要处理深度、遮挡、混合这些事情。
      * @param clearColor
      */
-    public InitRenderPass(clearColor: GPUColorDict) {
+    public InitRenderPass(clearColor: | GPULoadOp | GPUColor) {
         const renderPassDescriptor: GPURenderPassDescriptor = {
             colorAttachments: [
                 {

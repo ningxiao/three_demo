@@ -7,7 +7,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin-webpack5');
 const template = './www/template.html'; // 主入口文档
 const config = {
-    entry: Object.assign({ main: './src/main.ts' }, entry),
+    entry: Object.assign({
+        main: './src/main.ts'
+    }, entry),
     resolve: {
         extensions: ['.ts', '.tsx', '.css', '.less', '.js', '.vue'],
         fallback: {
@@ -19,14 +21,11 @@ const config = {
         }
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
-                use: [
-                    {
-                        loader: 'vue-loader',
-                    },
-                ],
+                use: [{
+                    loader: 'vue-loader',
+                }, ],
             },
             {
                 test: /\.png|jpg|gif|jpeg|svg/,
@@ -47,17 +46,14 @@ const config = {
             {
                 test: /\.ts|js$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                    },
-                ],
+                use: [{
+                    loader: 'babel-loader',
+                }, ],
             },
             {
                 test: /\.(glsl|vs|fs|vert|frag)$/,
                 exclude: /node_modules/,
-                use: [
-                    {
+                use: [{
                         loader: 'raw-loader',
                     },
                     {
@@ -68,16 +64,13 @@ const config = {
             {
                 test: /\.(wgsl)$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'raw-loader',
-                    }
-                ]
+                use: [{
+                    loader: 'raw-loader',
+                }]
             },
             {
                 test: /\.css|less$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader,
                     },
                     {
@@ -87,7 +80,9 @@ const config = {
                         loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
-                                plugins: [['postcss-preset-env', {}]],
+                                plugins: [
+                                    ['postcss-preset-env', {}]
+                                ],
                             },
                         },
                     },
@@ -118,18 +113,17 @@ const config = {
     ],
     output: {
         clean: true,
+        globalObject: 'this',
         filename: '[name].bundle_[chunkhash:8].js',
         path: path.resolve(__dirname, 'dist'),
     }
 };
 // 编译案例模块
 Object.keys(entry).forEach(key => {
-    config.plugins.push(new HtmlWebpackPlugin(
-        {
-            template,
-            chunks: [key],
-            filename: `${key}.html`
-        }
-    ));
+    config.plugins.push(new HtmlWebpackPlugin({
+        template,
+        chunks: [key],
+        filename: `${key}.html`
+    }));
 })
 module.exports = config;

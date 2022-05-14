@@ -102,12 +102,12 @@ import vxCode from '../shaders/wgsl/matrix.vertex.wgsl';
         keyName = 'end';
     }
     passEncoder[keyName]();
-    // Get a GPU buffer for reading in an unmapped state.
+    // 获取用于在未映射状态下读取的 GPU 缓冲区。
     const gpuReadBuffer = device.createBuffer({
         size: resultMatrixBufferSize,
         usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
     });
-    // Encode commands for copying buffer to buffer.
+    // 编码用于将缓冲区复制到缓冲区的命令。
     commandEncoder.copyBufferToBuffer(
         resultMatrixBuffer /* source buffer */,
         0 /* source offset */,
