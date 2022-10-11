@@ -1,0 +1,103 @@
+html,
+body {
+    margin                : 0;
+    padding               : 0;
+    height                : 100%;
+    width                 : 100%;
+    font-size             : 16px;
+    user-select           : none;
+    -webkit-font-smoothing: antialiased;
+    display               : flex;
+    justify-content       : center;
+    align-items           : center;
+}
+
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+
+#app {
+    position  : absolute;
+    width     : 100%;
+    height    : 100%;
+    overflow  : hidden;
+    background: linear-gradient(#e4e0ba, #f7d9aa);
+}
+
+.table {
+    border        : 1px solid #e8eaec;
+    border-right  : none;
+    border-bottom : none;
+    display       : flex;
+    width         : 100%;
+    height        : 100%;
+    flex-direction: column;
+
+    // ::-webkit-scrollbar {
+    //     display: block;
+    //     width  : 6px;
+    // }
+
+    // ::-webkit-scrollbar-thumb {
+    //     border-radius   : 1em;
+    //     background-color: rgba(50, 50, 50, 0.5);
+    // }
+
+    // ::-webkit-scrollbar-track {
+    //     border-radius   : 1em;
+    //     background-color: rgba(50, 50, 50, 0);
+    // }
+}
+
+.table-box {
+    position        : relative;
+    background-color: #fff;
+    overflow-y      : scroll;
+    flex            : 1;
+}
+
+.table-header,
+.table-main {
+    border               : 0;
+    border-spacing       : 0;
+    border-collapse      : separate;
+    table-layout         : fixed;
+    font-variant         : tabular-nums;
+    font-feature-settings: "tnum";
+}
+
+.table-main {
+    top      : 0;
+    left     : 0;
+    position : absolute;
+    transform: translate(0px, 0px);
+}
+
+.table-header {
+    background-color: #f8f8f9;
+}
+
+.table-header-row,
+.table-main-row {
+    color      : #606266;
+    line-height: 22px;
+    text-align : left;
+    height     : 48px;
+    font-weight: 700;
+    font-size  : 14px;
+
+    >th {
+        padding      : 0 10px;
+        border-bottom: 1px #e8eaec solid;
+        border-right : 1px #e8eaec solid;
+    }
+}
+
+.table-box-y-space {
+    width         : 100%;
+    height        : 100%;
+    pointer-events: none;
+}

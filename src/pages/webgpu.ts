@@ -6,6 +6,7 @@ import { PerspectiveCamera, Matrix4 } from 'three';
  * 中文版本API翻译
  * https://www.orillusion.com/zh/webgpu.html
  * https://www.orillusion.com/zh/wgsl.html
+ * https://alain.xyz/blog/raw-webgpu
  */
 type TypedArray =
     | Int8Array

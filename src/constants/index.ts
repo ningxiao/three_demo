@@ -35,6 +35,10 @@ export const menus = [
                 id: '2-2',
                 title: '并行缓存',
                 route: 'cacheAsync',
+            }, {
+                id: '2-3',
+                title: '虚拟树表格',
+                route: 'table',
             }
         ]
     }, {

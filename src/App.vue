@@ -58,7 +58,6 @@ export default class App extends Vue {
             this.activeKey = hash.replace('#/', '');
         }
         this.showExpand(this.activeKey);
-        console.log(this.expandKeys, this.activeKey);
     }
     mounted() {
         this.box = this.$refs.box as HTMLIFrameElement;

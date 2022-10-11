@@ -2038,10 +2038,10 @@
     "@webassemblyjs/ast" "1.11.1"
     "@xtuc/long" "4.2.2"
 
-"@webgpu/types@^0.1.9":
-  version "0.1.9"
-  resolved "http://r.npm.sankuai.com/@webgpu/types/download/@webgpu/types-0.1.9.tgz#4df7aa2112e9b9e77139e32736fe9cbab44e308c"
-  integrity sha1-TfeqIRLpuedxOeMnNv6curROMIw=
+"@webgpu/types@^0.1.21":
+  version "0.1.21"
+  resolved "http://r.npm.sankuai.com/@webgpu/types/download/@webgpu/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
+  integrity sha1-sYEgLa7DDWbM1nJk3iOBTP0XbTo=
 
 "@webpack-cli/configtest@^1.1.0":
   version "1.1.0"
@@ -3027,9 +3027,10 @@ camelcase@^6.0.0, camelcase@^6.2.0:
   version "6.2.0"
   resolved "http://r.npm.sankuai.com/camelcase/download/camelcase-6.2.0.tgz#924af881c9d525ac9d87f40d964e5cea982a1809"
 
-caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001271:
-  version "1.0.30001271"
-  resolved "http://r.npm.sankuai.com/caniuse-lite/download/caniuse-lite-1.0.30001271.tgz#0dda0c9bcae2cf5407cd34cac304186616cc83e8"
+caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001271, caniuse-lite@^1.0.30001336:
+  version "1.0.30001336"
+  resolved "http://r.npm.sankuai.com/caniuse-lite/download/caniuse-lite-1.0.30001336.tgz#a9eb13edd2613f418ebc632c8d6c9ab9fde7ccc4"
+  integrity sha1-qesT7dJhP0GOvGMsjWyauf3nzMQ=
 
 cannon-es@^0.18.0:
   version "0.18.0"
