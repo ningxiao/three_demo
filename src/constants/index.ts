@@ -39,6 +39,14 @@ export const menus = [
                 id: '2-3',
                 title: '虚拟树表格',
                 route: 'table',
+            }, {
+                id: '2-4',
+                title: '缓存设计',
+                route: 'axiosCache',
+            }, {
+                id: '2-5',
+                title: 'WebComponents',
+                route: 'webComponents',
             }
         ]
     }, {

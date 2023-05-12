@@ -1,12 +1,18 @@
 const koa = require("koa");
+const path = require('path');
 const cros = require('@koa/cors');
+const static = require('koa-static');
 const app = new koa();
+const staticPath = './static';
 const sleep = (seconds) => {
     return new Promise((resolve, reject) => {
         setTimeout(resolve, seconds);
     });
 };
 app.use(cros());
+app.use(static(
+    path.join(__dirname, staticPath)
+));
 app.use(async (ctx, next) => {
     if (ctx.url.includes('/test')) {
         const query = ctx.query;

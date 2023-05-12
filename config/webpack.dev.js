@@ -8,11 +8,16 @@ module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
+        port: 8080,
         open: true,
         https: false,
-        hotOnly: false,
-        disableHostCheck: true,
         historyApiFallback: true,
+        static: [
+            {
+                publicPath: '/',
+                directory: path.join(process.cwd(), 'src/assets'),
+            }
+        ],
         proxy: {
             '/sso/web/auth': {
                 target: 'http://ssodemo.it.test.sankuai.com',
@@ -25,8 +30,13 @@ module.exports = merge(common, {
                 secure: false,
                 changeOrigin: true,
                 logLevel: 'debug'
+            },
+            '/mock': {
+                target: 'http://localhost:3000/',
+                secure: false,
+                changeOrigin: true,
+                logLevel: 'debug'
             }
-        },
-        contentBase: path.join(__dirname, '../www')
+        }
     }
 });
